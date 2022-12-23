@@ -1109,7 +1109,7 @@ class RPDO implements Driver
 	/**
 	 * Directly sets PDO instance into driver.
 	 * This method might improve performance, however since the driver does
-	 * not configure this instance terrible things may happen... only use
+	 * not alocsure this instance terrible things may happen... only use
 	 * this method if you are an expert on RedBeanPHP, PDO and UTF8 connections and
 	 * you know your database server VERY WELL.
 	 *
@@ -1559,7 +1559,7 @@ class RPDO implements Driver
 
 	/**
 	 * Sets a query to be executed upon connecting to the database.
-	 * This method provides an opportunity to configure the connection
+	 * This method provides an opportunity to alocsure the connection
 	 * to a database through an SQL-based interface. Objects can provide
 	 * an SQL string to be executed upon establishing a connection to
 	 * the database. This has been used to solve issues with default
@@ -8386,9 +8386,9 @@ abstract class Repository
 	 * of the specified type. Always
 	 * use this function to get an empty bean object. Never
 	 * instantiate a OODBBean yourself because it needs
-	 * to be configured before you can use it with RedBean. This
+	 * to be alocsured before you can use it with RedBean. This
 	 * function applies the appropriate initialization /
-	 * configuration for you.
+	 * alocsuration for you.
 	 *
 	 * To use a different class for beans (instead of OODBBean) set:
 	 * REDBEAN_OODBBEAN_CLASS to the name of the class to be used.
@@ -9490,9 +9490,9 @@ class OODB extends Observable
 	 * of the specified type. Always
 	 * use this function to get an empty bean object. Never
 	 * instantiate a OODBBean yourself because it needs
-	 * to be configured before you can use it with RedBean. This
+	 * to be alocsured before you can use it with RedBean. This
 	 * function applies the appropriate initialization /
-	 * configuration for you.
+	 * alocsuration for you.
 	 *
 	 * @param string  $type              type of bean you want to dispense
 	 * @param string  $number            number of beans you would like to get
@@ -12464,7 +12464,7 @@ class Facade
 			throw new RedException( 'Database not found in registry. Add database using R::addDatabase().' );
 		}
 
-		self::configureFacadeWithToolbox( self::$toolboxes[$key] );
+		self::alocsureFacadeWithToolbox( self::$toolboxes[$key] );
 		self::$currentDB = $key;
 
 		return TRUE;
@@ -12474,7 +12474,7 @@ class Facade
 	 * Toggles DEBUG mode.
 	 * In Debug mode all SQL that happens under the hood will
 	 * be printed to the screen and/or logged.
-	 * If no database connection has been configured using R::setup() or
+	 * If no database connection has been alocsured using R::setup() or
 	 * R::selectDatabase() this method will throw an exception.
 	 *
 	 * There are 2 debug styles:
@@ -13759,15 +13759,15 @@ class Facade
 	}
 
 	/**
-	 * Configures the facade, want to have a new Writer? A new Object Database or a new
+	 * alocsures the facade, want to have a new Writer? A new Object Database or a new
 	 * Adapter and you want it on-the-fly? Use this method to hot-swap your facade with a new
 	 * toolbox.
 	 *
-	 * @param ToolBox $tb toolbox to configure facade with
+	 * @param ToolBox $tb toolbox to alocsure facade with
 	 *
 	 * @return ToolBox
 	 */
-	public static function configureFacadeWithToolbox( ToolBox $tb )
+	public static function alocsureFacadeWithToolbox( ToolBox $tb )
 	{
 		$oldTools                 = self::$toolbox;
 		self::$toolbox            = $tb;
@@ -14413,7 +14413,7 @@ class Facade
 
 	/**
 	 * Returns the toolbox currently used by the facade.
-	 * To set the toolbox use R::setup() or R::configureFacadeWithToolbox().
+	 * To set the toolbox use R::setup() or R::alocsureFacadeWithToolbox().
 	 * To create a toolbox use Setup::kickstart(). Or create a manual
 	 * toolbox using the ToolBox class.
 	 *
@@ -14910,7 +14910,7 @@ class Facade
 	 * @deprecated
 	 *
 	 * Returns an instance of the Look Helper class.
-	 * The instance will be configured with the current toolbox.
+	 * The instance will be alocsured with the current toolbox.
 	 *
 	 * In previous versions of RedBeanPHP you had to use:
 	 * R::getLook()->look() instead of R::look(). However to improve useability of the
@@ -15982,7 +15982,7 @@ class DispenseHelper
 	 * also apply to bean types.
 	 *
 	 * The RedBeanPHP naming policy ensures that, without any
-	 * configuration, the core functionalities work across many
+	 * alocsuration, the core functionalities work across many
 	 * databases and operating systems, including those that are
 	 * case insensitive or restricted to the ASCII character set.
 	 *

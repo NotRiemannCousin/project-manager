@@ -6,7 +6,7 @@
 
 
 
-        if(in_array(end($paths), ['create', 'delete', 'read', 'update']))
+        if(in_array(end($paths), ['create', 'delete', 'read', 'update', 'list']))
             $pathAux = '../../';
         echo "href=\"$pathAux".'about.php"';
         ?>>

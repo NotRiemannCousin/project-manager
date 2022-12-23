@@ -21,29 +21,29 @@ main {
     background-color: var(---gray-light);
     padding: 1em 2em;
     border-radius: 1em;
-    display: grid;
-    grid-template:
-        'devs  projs' min-content
-        'null  null' auto
-        / 2fr   1fr
-    ;
 }
-main 
-.devs, .projs{
-    margin: 1em;
+
+main .devs,
+.projs,
+.alocs {
+    margin: 1em 0;
+    padding: 1em;
+    background-color: var(---color-light-2);
+    border-radius: 10px;
+    border: solid 1px var(---color-separation-1);
 }
-.devs
-{
+
+.devs {
     grid-area: devs;
 }
-.projs
-{
+
+.projs {
     grid-area: projs;
 }
-/* main div.division:first-child{
-    text-overflow: ellipsis;
-    te
-} */
+
+.alocs {
+    grid-area: alocs;
+}
 
 br .division {
     background-color: var(---gray-white-1);
@@ -71,7 +71,7 @@ div table thead tr td * {
     text-align: center;
 }
 
-div table thead{
+div table thead {
     width: 100%;
 }
 
@@ -95,21 +95,14 @@ div table td {
     text-decoration: none;
 }
 
-.content table{
+.content table {
     display: block;
-}
-
-.content table tr>td:not(:first-child){
-    text-align: center;
-}
-th, td{
-    text-align: center;
 }
 
 /* td a{
     display: inline-block;
 } */
 
-thead>tr :last-child{
+thead>tr :last-child {
     width: 7em;
 }
