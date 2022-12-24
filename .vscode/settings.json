@@ -10,14 +10,16 @@
         ".gitignore": true,
         // "proj": true,
         "dev": true,
-        "aloc": true,
+        // "aloc": true,
         // "*.css": true
         // "**/*.php": true,
         //  "**/*.php": true,
          "*.php": true,
-        "**/*.css": true,
+        // "**/*.css": true,
         "*.css": true,
         "*.webp": true,
+        "sla.*": true,
+        "*.txt": true,
         // "**/*.html": true,
         // "classes": true,
     }

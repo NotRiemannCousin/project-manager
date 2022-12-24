@@ -27,7 +27,7 @@ $projs = R::findAll('projeto', 'INSTR(nome, "' . $_GET['proj-search'] . '")');
         <ul class="list-group">
             <?php
             foreach ($projs as $proj) {
-                echo '<li class="list-group-item"><a href="info.php?"dev-id=' . $_GET['dev-id'] . 'proj-id=' . $proj->id . '">' . $proj->nome . '</a></li>';
+                echo '<li class="list-group-item"><a href="info.php?dev-id=' . $_GET['dev-id'] . '&proj-id=' . $proj->id . '">' . $proj->nome . '</a></li>';
             }
             ?>
         </ul>

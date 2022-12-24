@@ -1,0 +1,4 @@
+Arrumar bug do CRUD
+Adicionar classes
+Responsividade e semântica da página principal
+Gerenciar DB

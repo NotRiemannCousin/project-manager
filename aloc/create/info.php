@@ -24,11 +24,36 @@ $dev = R::load('desenvolvedor', $_GET['dev-id']);
 <?php include_once '../../header.php' ?>
 <main>
     <div class="cabecalho">
-        <ul class="list-group">
-            <?php
-            echo $proj->nome;
-            ?>
-        </ul>
+        <form action="validate.php" method="get">
+            <div class="form-group">
+                <label class="label-control">Desenvolvedor</label>
+                <input type="text" class="form-control" class="form-control" <?= 'value="' . $dev->nome.'"' ?> readonly>
+                <input type="text" name="dev-id" <?= 'value="' . $dev->id . '"' ?> style="display: none">
+            </div>
+            <div class="form-group">
+                <label class="label-control">Projeto</label>
+                <input type="text" class="form-control" class="form-control" <?= 'value="' . $proj->nome.'"' ?> readonly>
+                <input type="text" name="proj-id" <?= 'value="' . $proj->id . '"' ?> style="display: none">
+            </div>
+            <div class="form-group">
+                <label class="label-control" for="inicio">Início</label>
+                <input type="date" name="inicio" id="inicio" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="label-control" for="term">Término</label>
+                <input type="date" name="term" id="term" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="label-control" for="remun">Remuneração</label>
+                <input type="number" name="remun" id="remun" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="label-control" for="horas">Horas Semanais</label>
+                <input type="number" name="horas" id="horas" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary">
+            </div>
     </div>
 </main>
 </body>

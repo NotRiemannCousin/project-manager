@@ -26,8 +26,8 @@ R::setup('mysql:host=127.0.0.1;dbname=GerenciadorProjetos', 'root');
             <h2>Procurar projeto</h2>
             <form action="proj-c.php" method="get">
                 <div class="form-group">
-                    <input type="search" name="search" class="form-control" <?= (isset($_GET['proj-search']) ? 'value=' . $_GET['proj-search'] : '') ?>>
-                    <input type="text" name="dev-id" <?= 'value="'.$_GET['dev-id'].'"' ?>>
+                    <input type="search" name="proj-search" class="form-control" <?= (isset($_GET['proj-search']) ? 'value=' . $_GET['proj-search'] : '') ?>>
+                    <input type="text" name="dev-id" <?= 'value="'.$_GET['dev-id'].'"' ?> style="display: none">
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary">
