@@ -9,18 +9,28 @@
         "README.md": true,
         ".gitignore": true,
         // "proj": true,
-        "dev": true,
+        // "dev": true,
         // "aloc": true,
-        // "*.css": true
+        // ".scss": true
         // "**/*.php": true,
-        //  "**/*.php": true,
-         "*.php": true,
-        // "**/*.css": true,
-        "*.css": true,
+        //  "*.php": true,
+        //  "index.php": true,
+         "rb-mysql.php": true,
+        // "**/.scss": true,
+        // ".scss": true,
+        // "**/.css": true,
+        // "*.css": true,
+        // "css": true,
+        "**/*.css.map": true,
         "*.webp": true,
         "sla.*": true,
         "*.txt": true,
         // "**/*.html": true,
         // "classes": true,
-    }
+    },
+    "liveSassCompile.settings.formats": [{
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/_css"
+    }]
 }

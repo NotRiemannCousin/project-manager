@@ -19,7 +19,7 @@ if (!$proj->id)
     <meta charset="UTF-8">
     <title>Atualizar Projeto</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../form.css">
+    <link rel="stylesheet" href="../../_css/form.css">
 </head>
 
 <body>

@@ -1,9 +1,9 @@
-@import url('base.css');
+@import 'base';
 
 .cabecalho {
     width: 360px;
     padding: 20px;
-    border: 1px solid var(---color-separation-1);
+    border: 1px solid $color-separation-1;
     border-radius: 20px;
 }
 

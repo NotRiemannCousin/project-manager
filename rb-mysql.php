@@ -3221,7 +3221,7 @@ class OODBBean implements \IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 	 * In database this relation might look like this:
 	 *
 	 * partType | part_id
-	 * --------------------
+	 * $-----------------
 	 * engine   | 1020300
 	 * wheel    | 4820088
 	 * chassis  | 7823122

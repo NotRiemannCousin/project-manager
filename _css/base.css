@@ -1,0 +1,141 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  font: 14px sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+main {
+  width: 100%;
+  padding: 2em;
+  flex-grow: 100;
+  margin: 1em 2em;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+th,
+td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+header {
+  background-color: #d5e2ec;
+  width: 100%;
+  border-bottom: 1px solid #2a2c2f;
+  padding: 1.7em 2em;
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0 0 0 0.5em;
+}
+
+footer {
+  background-color: #d5e2ec;
+  width: 100%;
+  border-top: 1px solid #2a2c2f;
+  padding: 0.7em;
+  text-align: center;
+}
+
+footer > p {
+  margin: 1em 0;
+}
+
+.col-d-1 {
+  width: 6.25%;
+}
+
+.col-d-2 {
+  width: 12.5%;
+}
+
+.col-d-3 {
+  width: 18.75%;
+}
+
+.col-d-4 {
+  width: 25%;
+}
+
+.col-d-5 {
+  width: 31.25%;
+}
+
+.col-d-6 {
+  width: 37.5%;
+}
+
+.col-d-7 {
+  width: 43.75%;
+}
+
+.col-d-8 {
+  width: 50%;
+}
+
+.col-d-9 {
+  width: 56.25%;
+}
+
+.col-d-10 {
+  width: 62.5%;
+}
+
+.col-d-11 {
+  width: 68.75%;
+}
+
+.col-d-12 {
+  width: 75%;
+}
+
+.col-d-13 {
+  width: 81.25%;
+}
+
+.col-d-14 {
+  width: 87.5%;
+}
+
+.col-d-15 {
+  width: 93.75%;
+}
+
+.col-d-16 {
+  width: 100%;
+}
+
+@media screen and (width < 480px) {
+  .col-m-1 {
+    width: 16.6666666667%;
+  }
+  .col-m-2 {
+    width: 33.3333333333%;
+  }
+  .col-m-3 {
+    width: 50%;
+  }
+  .col-m-4 {
+    width: 66.6666666667%;
+  }
+  .col-m-5 {
+    width: 83.3333333333%;
+  }
+  .col-m-6 {
+    width: 100%;
+  }
+}/*# sourceMappingURL=base.css.map */

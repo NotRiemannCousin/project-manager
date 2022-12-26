@@ -75,5 +75,5 @@ def projs_def():
         # time.sleep(.05)
         keyboard.send('tab')
 
-
+names_def()
 # here

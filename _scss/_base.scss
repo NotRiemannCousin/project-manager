@@ -1,11 +1,8 @@
-:root {
-    ---color-separation-1: #2b2a2a52;
-    ---color-separation-2: #2a2c2f;
+$color-separation-1: #2b2a2a52;
+$color-separation-2: #2a2c2f;
 
-    ---color-light-1: #d5e2ec;
-    ---color-light-2: #f1f8fd;
-}
-
+$color-light-1: #d5e2ec;
+$color-light-2: #f1f8fd;
 
 body,
 html {
@@ -27,7 +24,7 @@ main {
     margin: 1em 2em;
 }
 
-.center{
+.center {
     display: flex;
     align-items: center;
     /* justify-content: center; */
@@ -40,27 +37,40 @@ td {
 }
 
 header {
-
-    background-color: var(---color-light-1);
+    background-color: $color-light-1;
     width: 100%;
-    border-bottom: 1px solid var(---color-separation-2);
+    border-bottom: 1px solid $color-separation-2;
     padding: 1.7em 2em;
     display: flex;
     align-items: center;
 }
 
 header h1 {
-    margin: 0 0 0 .5em;
+    margin: 0 0 0 0.5em;
 }
 
 footer {
-    background-color: var(---color-light-1);
+    background-color: $color-light-1;
     width: 100%;
-    border-top: 1px solid var(---color-separation-2);
-    padding: .7em;
+    border-top: 1px solid $color-separation-2;
+    padding: 0.7em;
     text-align: center;
 }
 
-footer>p {
+footer > p {
     margin: 1em 0;
+}
+
+@mixin coloums($media, $amount) {
+    @for $i from 1 to $amount + 1 {
+        .col-#{$media}-#{$i} {
+            width: $i * 100% / $amount;
+        }
+    }
+}
+
+@include coloums(d, 16);
+
+@media screen and (width < 480px) {
+    @include coloums(m, 6);
 }
