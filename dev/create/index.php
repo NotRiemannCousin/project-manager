@@ -32,7 +32,7 @@
                 </div>
                 <div class="form-group">
                     <label>Data de Nascimento:</label>
-                    <input type="date" name="nasc" class="form-control" <?= (isset($_GET['nasc']) ? 'value=' . $_GET['nasc'] : '') ?>>
+                    <input type="date" name="nasc" class="form-control" <?= (isset($_GET['nasc']) ? 'value=' . $_GET['nasc'] : '') ?> <?= 'max="'.(new DateTime('-14 years'))->format('Y-m-d').'"'?>>
                 </div>
                 <div class="form-group">
                     <label>Nivel:</label>
