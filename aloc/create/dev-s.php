@@ -21,8 +21,8 @@
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary">
                 </div>
-            </div>
-            <a href="../../">voltar</a>
+        </div>
+        <a href="../../">voltar</a>
     </main>
 </body>
 <?php include_once '../../footer.php' ?>
@@ -36,6 +36,9 @@ if (isset($_GET['err'])) {
             break;
         case 2:
             echo '<script>alert("Informações inválidas!");</script>';
+            break;
+        case 4:
+            echo '<script>alert("Usuario/Projeto não existente!");</script>';
             break;
     }
 }

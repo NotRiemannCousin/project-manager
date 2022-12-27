@@ -1,35 +1,32 @@
 <?php
 require_once '../../rb-mysql.php';
+require_once '../../functions.php';
 
-function checkmydate($date) {
-  $tempDate = explode('-', $date);
-  if(count($tempDate) != 3)
-    return false;
-  return checkdate($tempDate[1], $tempDate[2], $tempDate[0]);
-}
-
-R::setup('mysql:host=127.0.0.1;dbname=GerenciadorProjetos', 'root');
 
 if (
-    (
-        !isset($_POST['nome'])  ||
+    (!isset($_POST['nome'])  ||
         !isset($_POST['nasc'])  ||
         !isset($_POST['nivel']) ||
         !isset($_POST['email']) ||
         !isset($_POST['senha'])
-    ) ||
-    !checkmydate($_POST['nasc'])
+    )                                        ||
+    (My::CheckDate($_POST['nasc']) == false) ||
+    (My::CheckDate($_POST['nasc']) > new DateTime('-14 years'))
 ) {
-    header('Location: index.php?err=1.'
-    .(isset($_POST['nome']) ? '&nome='.$_POST['nome'] : '')
-    .(isset($_POST['nasc']) ? '&nasc='.$_POST['nasc'] : '')
-    .(isset($_POST['nivel']) ? '&nivel='.$_POST['nivel'] : '')
-    .(isset($_POST['email']) ? '&email='.$_POST['email'] : '')
-    .(isset($_POST['admin']) ? '&admin='.$_POST['admin'] : '')
-    .(isset($_POST['ativo']) ? '&ativo='.$_POST['ativo'] : '')
-);
+    header(
+        'Location: index.php?err=1.'
+            . (isset($_POST['nome']) ? '&nome=' . $_POST['nome'] : '')
+            . (isset($_POST['nasc']) ? '&nasc=' . $_POST['nasc'] : '')
+            . (isset($_POST['nivel']) ? '&nivel=' . $_POST['nivel'] : '')
+            . (isset($_POST['email']) ? '&email=' . $_POST['email'] : '')
+            . (isset($_POST['admin']) ? '&admin=' . $_POST['admin'] : '')
+            . (isset($_POST['ativo']) ? '&ativo=' . $_POST['ativo'] : '')
+    );
     die;
 }
+
+
+R::setup('mysql:host=127.0.0.1;dbname=GerenciadorProjetos', 'root');
 
 $nome = preg_replace("/[^a-zA-Z0-9\s!?.,\'\"]/", "", $_POST['nome']);
 $nasc = $_POST['nasc'];
@@ -53,5 +50,5 @@ $dev->admin = $admin;
 
 R::store($dev);
 
-header('Location: ../../');
+header('Location: ../list/');
 R::close();

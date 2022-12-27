@@ -19,3 +19,4 @@
 /fuel/app/logs/*/*/*
 /fuel/app/cache/*/*
 /fuel/app/alocs/crypt.php
+project-manager.code-workspace.json

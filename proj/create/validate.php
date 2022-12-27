@@ -1,30 +1,30 @@
 <?php
 require_once '../../rb-mysql.php';
-
-function checkmydate($date) {
-  $tempDate = explode('-', $date);
-  if(count($tempDate) != 3)
-    return false;
-  return checkdate($tempDate[1], $tempDate[2], $tempDate[0]);
-}
+require_once '../../functions.php';
 
 R::setup('mysql:host=127.0.0.1;dbname=GerenciadorProjetos', 'root');
 
 if (
-    (
-        !isset($_POST['nome'])  ||
-        !isset($_POST['inicio'])  ||
-        !isset($_POST['terminoEsp']) ||
-        !isset($_POST['termino'])
-    )
+  (!isset($_POST['nome'])        ||
+    !isset($_POST['inicio'])     ||
+    !isset($_POST['terminoEsp']) ||
+    !isset($_POST['termino'])
+  )                                                                       ||
+  (My::CheckDate($_POST['inicio']) == false)                              ||
+  (My::CheckDate($_POST['terminoEsp']) == false)                          ||
+  (My::CheckDate($_POST['termino']) == false)                             ||
+  (My::CheckDate($_POST['inicio']) > My::CheckDate($_POST['terminoEsp'])) ||
+  (My::CheckDate($_POST['inicio']) > My::CheckDate($_POST['termino']))
+
 ) {
-    header('Location: index.php?err=1.'
-    .(isset($_POST['nome']) ? '&nome='.$_POST['nome'] : '')
-    .(isset($_POST['inicio']) ? '&inicio='.$_POST['inicio'] : '')
-    .(isset($_POST['terminoEsp']) ? '&terminoEsp='.$_POST['terminoEsp'] : '')
-    .(isset($_POST['termino']) ? '&termino='.$_POST['termino'] : '')
-);
-    die;
+  header(
+    'Location: index.php?err=1.'
+      . (isset($_POST['nome']) ? '&nome=' . $_POST['nome'] : '')
+      . (isset($_POST['inicio']) ? '&inicio=' . $_POST['inicio'] : '')
+      . (isset($_POST['terminoEsp']) ? '&terminoEsp=' . $_POST['terminoEsp'] : '')
+      . (isset($_POST['termino']) ? '&termino=' . $_POST['termino'] : '')
+  );
+  die;
 }
 
 $nome = preg_replace("/[^a-zA-Z0-9\s!?.,\'\"]/", "", $_POST['nome']);
@@ -44,5 +44,5 @@ $proj->termino = $termino;
 
 R::store($proj);
 
-header('Location: ../../');
+header('Location: ../list/');
 R::close();
