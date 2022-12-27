@@ -44,7 +44,7 @@ if (!$dev->id)
                 </div>
                 <div class="form-group">
                     <label>Data de Nascimento:</label>
-                    <input type="date" name="nasc" class="form-control" <?= 'value="' . $dev->nasc . '"' ?>>
+                    <input type="date" name="nasc" class="form-control" <?= 'value="' . $dev->nasc . '"' ?>  <?= 'max="'.(new DateTime('-14 years'))->format('Y-m-d').'"'?>>
                 </div>
                 <div class="form-group">
                     <label>Nivel:</label>
