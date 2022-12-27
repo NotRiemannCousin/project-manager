@@ -4,13 +4,13 @@ require_once '../../functions.php';
 
 
 if (
-    (!isset($_POST['nome'])  ||
+    (!isset($_POST['nome'])     ||
         !isset($_POST['nasc'])  ||
         !isset($_POST['nivel']) ||
         !isset($_POST['email']) ||
         !isset($_POST['senha'])
-    )                                        ||
-    (My::CheckDate($_POST['nasc']) == false) ||
+    )                                                           ||
+    (My::CheckDate($_POST['nasc']) == false)                    ||
     (My::CheckDate($_POST['nasc']) > new DateTime('-14 years'))
 ) {
     header(
@@ -33,8 +33,8 @@ $nasc = $_POST['nasc'];
 $nivel = $_POST['nivel'];
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 $senha = preg_replace("/[^a-zA-Z0-9\s!?.,\'\"]/", "", $_POST['senha']);
-$ativo = ($_POST['ativo'] == 'on' ? 1 : 0);
-$admin = ($_POST['admin'] == 'on' ? 1 : 0);
+$ativo = (isset($_POST['ativo']) && $_POST['ativo'] == 'on' ? 1 : 0);
+$admin = (isset($_POST['admin']) && $_POST['admin'] == 'on' ? 1 : 0);
 
 
 
