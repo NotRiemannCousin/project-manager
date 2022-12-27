@@ -22,8 +22,8 @@ $aloc = R::load('alocacao', $_GET['id']);
 </head>
 <?php include_once '../../header.php' ?>
 <main>
-    <div class="cabecalho">
-        <form action="validate.php" method="post">
+    <form action="validate.php" method="post">
+        <div class="cabecalho">
             <input type="text" name="id" <?= 'value="' . $_GET['id'] . '"' ?> style="display: none">
             <div class="form-group">
                 <label class="label-control">Desenvolvedor</label>
@@ -54,7 +54,9 @@ $aloc = R::load('alocacao', $_GET['id']);
             <div class="form-group">
                 <input type="submit" class="btn btn-primary">
             </div>
-    </div>
+        </div>
+    </form>
+    <a href="../../">Voltar</a>
 </main>
 </body>
 <?php include_once '../../footer.php' ?>

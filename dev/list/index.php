@@ -16,6 +16,7 @@
     $devs = R::findAll('desenvolvedor');
     ?>
     <main>
+        <a href="../../">Voltar</a>
         <table class="table table-bordered">
             <thead class="thead-light">
                 <tr>

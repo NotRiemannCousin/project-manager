@@ -16,6 +16,7 @@
     $alocs = R::findAll('alocacao');
     ?>
     <main>
+        <a href="../../">Voltar</a>
         <table class="table table-bordered">
             <thead class="thead-light">
                 <tr>
