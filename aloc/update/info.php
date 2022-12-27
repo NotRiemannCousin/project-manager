@@ -23,7 +23,7 @@ $aloc = R::load('alocacao', $_GET['id']);
 <?php include_once '../../header.php' ?>
 <main>
     <div class="cabecalho">
-        <form action="validate.php" method="get">
+        <form action="validate.php" method="post">
             <input type="text" name="id" <?= 'value="' . $_GET['id'] . '"' ?> style="display: none">
             <div class="form-group">
                 <label class="label-control">Desenvolvedor</label>

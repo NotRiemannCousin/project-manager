@@ -5,17 +5,17 @@ require_once '../../functions.php';
 
 if (
     (
-        !isset($_GET['dev-id'])  ||
-        !isset($_GET['proj-id']) ||
-        !isset($_GET['inicio'])  ||
-        !isset($_GET['term'])    ||
-        !isset($_GET['remun'])   ||
-        !isset($_GET['horas'])
+        !isset($_POST['dev-id'])  ||
+        !isset($_POST['proj-id']) ||
+        !isset($_POST['inicio'])  ||
+        !isset($_POST['term'])    ||
+        !isset($_POST['remun'])   ||
+        !isset($_POST['horas'])
     )                                                                 ||
-    (My::CheckDate($_GET['inicio']) == false)                         ||
-    (My::CheckDate($_GET['term'])   == false)                         ||
-    (My::CheckDate($_GET['inicio']) > new DateTime())                 ||
-    (My::CheckDate($_GET['term']) > My::CheckDate($_GET['inicio']))
+    (My::CheckDate($_POST['inicio']) == false)                         ||
+    (My::CheckDate($_POST['term'])   == false)                         ||
+    (My::CheckDate($_POST['inicio']) > new DateTime())                 ||
+    (My::CheckDate($_POST['term']) > My::CheckDate($_POST['inicio']))
 ) {
     header('location: dev-s.php?err=2');
     die;
@@ -26,8 +26,8 @@ if (
 R::setup('mysql:host=127.0.0.1;dbname=GerenciadorProjetos', 'root');
 
 
-$proj = R::load('projeto', $_GET['proj-id']);
-$dev = R::load('desenvolvedor', $_GET['dev-id']);
+$proj = R::load('projeto', $_POST['proj-id']);
+$dev = R::load('desenvolvedor', $_POST['dev-id']);
 
 if (!$proj || !$dev)
 {
@@ -35,11 +35,11 @@ if (!$proj || !$dev)
     die;
 }
 
-$aloc = R::load('alocacao', $_GET['id']);
-$aloc->inicio = $_GET['inicio'];
-$aloc->termino = $_GET['term'];
-$aloc->remuneracao = $_GET['remun'];
-$aloc->horas = $_GET['horas'];
+$aloc = R::load('alocacao', $_POST['id']);
+$aloc->inicio = $_POST['inicio'];
+$aloc->termino = $_POST['term'];
+$aloc->remuneracao = $_POST['remun'];
+$aloc->horas = $_POST['horas'];
 $aloc->projeto = $proj;
 $aloc->desenvolvedor = $dev;
 

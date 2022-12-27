@@ -24,7 +24,7 @@ $dev = R::load('desenvolvedor', $_GET['dev-id']);
 <?php include_once '../../header.php' ?>
 <main>
     <div class="cabecalho">
-        <form action="validate.php" method="get">
+        <form action="validate.php" method="post">
             <div class="form-group">
                 <label>Desenvolvedor</label>
                 <input type="text" class="form-control" class="form-control" <?= 'value="' . $dev->nome . '"' ?> readonly>
