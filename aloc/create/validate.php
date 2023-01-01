@@ -11,16 +11,14 @@ if (
         !isset($_POST['term'])    ||
         !isset($_POST['remun'])   ||
         !isset($_POST['horas'])
-    )                                                                 ||
+    )                                                                  ||
     (My::CheckDate($_POST['inicio']) == false)                         ||
     (My::CheckDate($_POST['term'])   == false)                         ||
-    (My::CheckDate($_POST['inicio']) > new DateTime())                 ||
-    (My::CheckDate($_POST['term']) > My::CheckDate($_POST['inicio']))
+    (My::CheckDate($_POST['term']) < My::CheckDate($_POST['inicio']))
 ) {
     header('location: dev-s.php?err=2');
     die;
 }
-
 
 
 R::setup('mysql:host=127.0.0.1;dbname=GerenciadorProjetos', 'root');
@@ -35,7 +33,7 @@ if (!$proj || !$dev)
     die;
 }
 
-$aloc = R::load('alocacao', $_POST['id']);
+$aloc = R::dispense('alocacao');
 $aloc->inicio = $_POST['inicio'];
 $aloc->termino = $_POST['term'];
 $aloc->remuneracao = $_POST['remun'];

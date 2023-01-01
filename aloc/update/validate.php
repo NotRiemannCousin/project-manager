@@ -13,12 +13,14 @@ if (
         !isset($_POST['remun'])   ||
         !isset($_POST['horas'])
     )                                                                 ||
-    !(My::CheckDate($_POST['inicio']) == false)                        ||
-    !(My::CheckDate($_POST['term'])   == false)                        ||
-    (My::CheckDate($_POST['inicio']) > new DateTime())                 ||
-    (My::CheckDate($_POST['term']) > My::CheckDate($_POST['inicio']))
+    (My::CheckDate($_POST['inicio']) == false)                        ||
+    (My::CheckDate($_POST['term'])   == false)                        ||
+    (My::CheckDate($_POST['term']) < My::CheckDate($_POST['inicio']))
 ) {
-    header('location: dev-s.php?err=2');
+    if(isset($_POST['id']))
+        header('location: info.php?err=2&id='.$_POST['id']);
+    else
+        header('location: ../list/?err=2');
     die;
 }
 
@@ -32,7 +34,7 @@ $dev = R::load('desenvolvedor', $_POST['dev-id']);
 
 if (!$proj || !$dev)
 {
-    header('location: dev-s.php?err=4');
+    header('location: info.php?err=4&id='.$_POST['id']);
     die;
 }
 

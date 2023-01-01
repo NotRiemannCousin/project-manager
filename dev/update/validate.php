@@ -21,7 +21,7 @@ if (
             . (isset($_POST['nasc']) ? '&nasc=' . $_POST['nasc'] : '')
             . (isset($_POST['nivel']) ? '&nivel=' . $_POST['nivel'] : '')
             . (isset($_POST['email']) ? '&email=' . $_POST['email'] : '')
-            . (isset($_POST['admin']) ? '&admin=' . $_POST['admin'] : '')
+            . (isset($_POST['admin']) ? '&admiZn=' . $_POST['admin'] : '')
             . (isset($_POST['ativo']) ? '&ativo=' . $_POST['ativo'] : '')
     );
     die;
