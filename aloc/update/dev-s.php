@@ -22,7 +22,7 @@
                     <input type="submit" class="btn btn-primary">
                 </div>
             </div>
-            <a href="../../">voltar</a>
+            <div class="back-link"><a href="../../">Voltar</a></div>
     </main>
 </body>
 <?php include_once '../../footer.php' ?>

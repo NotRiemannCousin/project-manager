@@ -56,7 +56,7 @@ $aloc = R::load('alocacao', $_GET['id']);
             </div>
         </div>
     </form>
-    <a href="../../">Voltar</a>
+    <div class="back-link"><a href="../../">Voltar</a></div>
 </main>
 </body>
 <?php include_once '../../footer.php' ?>

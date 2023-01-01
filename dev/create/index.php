@@ -57,7 +57,7 @@
                 </div>
         </div>
         </form>
-        <a href="../../">Voltar</a>
+        <div class="back-link"><a href="../../">Voltar</a></div>
         </div>
     </main>
     <?php include '../../footer.php' ?>

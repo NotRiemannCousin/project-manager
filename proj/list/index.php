@@ -16,7 +16,7 @@
     $projs = R::findAll('projeto');
     ?>
     <main>
-        <a href="../../">Voltar</a>
+        <div class="back-link"><a href="../../">Voltar</a></div>
         <table class="table table-bordered">
             <thead class="thead-light">
                 <tr>
