@@ -1,3 +1,17 @@
 <header>
-    <h1>Gerenciador de Projetos</h1>
+<svg viewBox="0 0 500 500" width="5em">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="250" y1="144.877" x2="250" y2="399.837" id="gradient-0" gradientTransform="matrix(1.551419, 0, 0, 1.551419, -137.854881, -137.854746)">
+      <stop offset="0" style="stop-color: rgba(27, 88, 134, 1)"></stop>
+      <stop offset="1" style="stop-color: rgba(10, 32, 49, 1)"></stop>
+    </linearGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="-232.999" cy="-246.318" r="67.714" id="gradient-1" gradientTransform="matrix(1.551419, 0, 0, 1.551419, 128.480194, 135.824554)">
+      <stop offset="0" style="stop-color: rgba(156, 212, 255, 1)"></stop>
+      <stop offset="1" style="stop-color: rgba(54, 168, 255, 1)"></stop>
+    </radialGradient>
+  </defs>
+  <path style="fill: url(#gradient-0);" d="M 385.665 91.443 L 386.409 125.132 C 384.466 148.147 378.53 193.342 357.786 228.996 C 337.042 264.65 299.443 289.93 277.891 332.715 C 256.334 375.498 257.631 397.865 254.877 428.007 L 253.096 482.459 L 255.201 310.791 L 255.902 300.285 C 255.902 300.285 258.093 268.767 270.354 230.155 C 321.077 220.617 359.453 176.087 359.453 122.592 C 359.453 116.165 358.899 109.868 357.836 103.744 C 390.865 75.376 385.665 91.443 385.665 91.443 Z M 244.1 300.285 L 244.8 310.791 L 246.906 482.459 L 245.125 428.007 C 242.368 397.865 243.666 375.498 222.11 332.715 C 200.556 289.93 162.959 264.65 142.215 228.996 C 121.471 193.342 115.536 148.147 113.592 125.132 L 114.334 91.443 C 114.334 91.443 109.136 75.376 142.165 103.744 C 141.102 109.868 140.548 116.165 140.548 122.592 C 140.548 176.087 178.924 220.617 229.648 230.155 C 241.909 268.767 244.1 300.285 244.1 300.285 Z" data-bx-origin="-0.921666 -0.568233"></path>
+  <ellipse style="fill: url(#gradient-1);" cx="-232.999" cy="-246.318" rx="105.052" ry="105.052" transform="matrix(0, 1, -1, 0, 3.703759, 355.591924)"></ellipse>
+</svg>
+<h1>Gerenciador de Projetos</h1>
 </header>

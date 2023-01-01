@@ -15,7 +15,7 @@
         "_scss": true,
         "_css": true,
         // "**/*.php": true,
-        "*.php": true,
+        // "*.php": true,
         //  "index.php": true,
          "rb-mysql.php": true,
         // "**/.scss": true,
