@@ -10,30 +10,23 @@
         ".gitignore": true,
         ".vscode": true,
         "aloc": true,
-        "dev": true,
+        "dev": false,
         "proj": true,
-        // "_scss": true,
-        // "_css": true,
-        // "**/*.php": true,
+        "_css": true,
+        "_scss": true,
         "*.php": true,
-        //  "index.php": true,
-         "rb-mysql.php": true,
-        // "**/.scss": true,
-        // ".scss": true,
-        // "**/.css": true,
-        // "*.css": true,
-        // "css": true,
+        "rb-mysql.php": true,
         "**/*.css.map": true,
         "*.webp": true,
         "sla.*": true,
         "*.txt": true,
-        // "**/*.html": true,
-        // "classes": true,
-        "project-manager.code-workspace": true,
+        "project-manager.code-workspace": true
     },
     "liveSassCompile.settings.formats": [{
         "format": "expanded",
         "extensionName": ".css",
         "savePath": "/_css"
-    }]
+    }
+],
+"explorerExclude.backup": {}
 }

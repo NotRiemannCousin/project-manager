@@ -50,9 +50,9 @@
                     <td><?= $dev->nome ?></td>
                     <td><?= $dev->nasc ?></td>
                     <td><?= $dev->nivel ?></td>
-                    <td><?= $dev->email ?></td>
-                    <td><?= ($dev->admin ? 'sim' : 'não') ?></td>
-                    <td><?= ($dev->ativo ? 'sim' : 'não') ?></td>
+                    <td><?= $dev->credencial->email ?></td>
+                    <td><?= ($dev->credencial->admin ? 'sim' : 'não') ?></td>
+                    <td><?= ($dev->credencial->ativo ? 'sim' : 'não') ?></td>
                     <td>
                         <a <?= 'href="../update/index.php?id=' . $dev->id . '"' ?> title="Editar">
                             <svg viewBox="1.008 -0.05 237.675 240.964" height="1.75em">

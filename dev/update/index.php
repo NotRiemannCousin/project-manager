@@ -36,11 +36,11 @@ if (!$dev->id)
                 </div>
                 <div class="form-group">
                     <label>Senha:</label>
-                    <input type="password" name="senha" class="form-control"  <?= 'value="' . $dev->senha . '"' ?>>
+                    <input type="password" name="senha" class="form-control"  <?= 'value="' . $dev->credencial->senha . '"' ?>>
                 </div>
                 <div class="form-group">
                     <label>Email:</label>
-                    <input type="email" name="email" class="form-control" <?= 'value="' . $dev->email . '"' ?>>
+                    <input type="email" name="email" class="form-control" <?= 'value="' . $dev->credencial->email . '"' ?>>
                 </div>
                 <div class="form-group">
                     <label>Data de Nascimento:</label>
@@ -69,11 +69,11 @@ if (!$dev->id)
 
                 <div class="form-group">
                     <label for="admin" class="form-check-label">Administrador: </label>
-                    <input type="checkbox" name="admin" id="admin" <?= ($dev->admin ? 'checked' : '') ?>>
+                    <input type="checkbox" name="admin" id="admin" <?= ($dev->credencial->admin ? 'checked' : '') ?>>
                 </div>
                 <div class="form-group">
                     <label for="ativo" class="form-check-label">Ativo: </label>
-                    <input type="checkbox" name="ativo" id="ativo" <?= ($dev->ativo ? 'checked' : '') ?>>
+                    <input type="checkbox" name="ativo" id="ativo" <?= ($dev->credencial->ativo ? 'checked' : '') ?>>
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Salvar">

@@ -4,6 +4,8 @@ require_once '../../rb-mysql.php';
 
 R::setup('mysql:host=127.0.0.1;dbname=GerenciadorProjetos', 'root');
 
-if (isset($_GET['id']) && intval($_GET['id']))
+if (isset($_GET['id']) && intval($_GET['id'])) {
     R::trash('desenvolvedor', $_GET['id']);
+    R::trash('credencial', $_GET['id']);
+}
 header('Location: ../../');

@@ -1,18 +1,31 @@
 <?php
+// include 'rb-mysql.php';
 
-function MyCheckDate($str)
-{
-    $d = substr($str, 0, 2);
-    $m = substr($str, 3, 2);
-    $y = substr($str, 6, 4);
-
-    if (!checkdate($m, $d, $y))
-        return false;
-
-    return DateTime::createFromFormat('d-m-Y G:i:s', "$d-$m-$y 00:00:00");
-}
+// R::setup('mysql:host=127.0.0.1;dbname=GerenciadorProjetos', 'root');
 
 
 
+$s = "asvfvkmfavpã~éáà";
 
-var_dump(MyCheckDate('13-02-2003'));
+// // $dev = R::load('zzzzzz', 2);
+
+echo '<pre>';
+
+print_r($s);
+// // print_r($dev);
+echo "\n\n";
+// // print_r($dev->credencial);
+
+print_r (preg_replace("/[^\p{L}\s]/u", "", $s));
+echo '</pre>';
+
+
+// $devs = R::findAll('desenvolvedor');
+// $creds = R::findAll('credencial');
+
+
+// foreach($devs as $dev){
+//     $dev->credencial = $creds[$dev->id];
+//     R::store($dev);
+// }
+

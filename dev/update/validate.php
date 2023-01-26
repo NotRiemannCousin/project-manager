@@ -27,27 +27,30 @@ if (
     die;
 }
 
-$nome = preg_replace("/[^a-zA-Z0-9\s!?.,\'\"]/", "", $_POST['nome']);
+$nome = preg_replace("/[^\p{L}\s]/u", "", $_POST['nome']);
 $nasc = $_POST['nasc'];
 $nivel = $_POST['nivel'];
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-$senha = preg_replace("/[^a-zA-Z0-9\s!?.,\'\"]/", "", $_POST['senha']);
+$senha = preg_replace("/[^\p{L}]/u", "", $_POST['senha']);
 $ativo = ($_POST['ativo'] == 'on' ? 1 : 0);
 $admin = ($_POST['admin'] == 'on' ? 1 : 0);
 
 
 
 $dev = R::load('desenvolvedor', $_POST['id']);
+echo $_POST['nome']."-".$dev->nome."-".$nome;
 
 $dev->nome  = $nome;
 $dev->nasc  = $nasc;
 $dev->nivel = $nivel;
-$dev->email = $email;
-$dev->senha = $senha;
-$dev->ativo = $ativo;
-$dev->admin = $admin;
+$dev->credencial->email = $email;
+$dev->credencial->senha = $senha;
+$dev->credencial->ativo = $ativo;
+$dev->credencial->admin = $admin;
 
 R::store($dev);
 
-header('Location: ../list/');
+
+
+// header('Location: ../list/');
 R::close();

@@ -28,27 +28,32 @@ if (
 
 R::setup('mysql:host=127.0.0.1;dbname=GerenciadorProjetos', 'root');
 
-$nome = preg_replace("/[^a-zA-Z0-9\s!?.,\'\"]/", "", $_POST['nome']);
+$nome = preg_replace("/[^\p{L}\s]/u", "", $_POST['nome']);
 $nasc = $_POST['nasc'];
 $nivel = $_POST['nivel'];
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-$senha = preg_replace("/[^a-zA-Z0-9\s!?.,\'\"]/", "", $_POST['senha']);
+$senha = preg_replace("/[^\p{L}]/u", "", $_POST['senha']);
 $ativo = (isset($_POST['ativo']) && $_POST['ativo'] == 'on' ? 1 : 0);
 $admin = (isset($_POST['admin']) && $_POST['admin'] == 'on' ? 1 : 0);
 
 
 
-$dev = R::dispense('desenvolvedor');
+$dev  = R::dispense('desenvolvedor');
+$cred = R::dispense('credencial');
 
-$dev->nome  = $nome;
-$dev->nasc  = $nasc;
-$dev->nivel = $nivel;
-$dev->email = $email;
-$dev->senha = $senha;
-$dev->ativo = $ativo;
-$dev->admin = $admin;
+$dev->nome        = $nome;
+$dev->nasc        = $nasc;
+$dev->nivel       = $nivel;
+$dev->credencial  = $cred;
+
+$cred->email         = $email;
+$cred->senha         = $senha;
+$cred->ativo         = $ativo;
+$cred->admin         = $admin;
+$cred->desenvolvedor = $dev;
 
 R::store($dev);
+R::store($cred);
 
 header('Location: ../list/');
 R::close();

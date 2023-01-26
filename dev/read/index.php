@@ -30,10 +30,10 @@ if (!$dev->id)
         <p>Nome: <?= $dev->nome ?></p>
         <p>Nascimento: <?= $dev->nasc ?></p>
         <p>Nivel: <?= $dev->nivel ?></p>
-        <p>Email: <?= $dev->email ?></p>
-        <p>Senha: <?= $dev->senha ?></p>
-        <p>Admin: <?= ($dev->admin ? 'sim' : 'não') ?></p>
-        <p>Ativo: <?= ($dev->ativo ? 'sim' : 'não') ?></p>
+        <p>Email: <?= $dev->credencial->email ?></p>
+        <p>Senha: <?= $dev->credencial->senha ?></p>
+        <p>Admin: <?= ($dev->credencial->admin ? 'sim' : 'não') ?></p>
+        <p>Ativo: <?= ($dev->credencial->ativo ? 'sim' : 'não') ?></p>
     </main>
     <?php include_once '../../footer.php' ?>
 </body>
