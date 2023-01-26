@@ -1,5 +1,6 @@
 body,
 html {
+  background-image: linear-gradient(rgb(251, 253, 255), rgb(228, 242, 255));
   padding: 0;
   margin: 0;
   width: 100%;
@@ -31,8 +32,9 @@ td {
 }
 
 header {
-  background-color: #d5e2ec;
+  background-image: linear-gradient(#243261, #1c2850);
   width: 100%;
+  color: white;
   border-bottom: 1px solid #2a2c2f;
   padding: 0.5em 1.5em;
   display: flex;
@@ -44,7 +46,7 @@ header h1 {
 }
 
 footer {
-  background-color: #d5e2ec;
+  background-image: linear-gradient(#1c2850, #243261);
   width: 100%;
   border-top: 1px solid #2a2c2f;
   padding: 0.7em;
@@ -177,9 +179,10 @@ main .devs,
 .alocs {
   margin: 1em 0;
   padding: 1em;
-  background-color: #f1f8fd;
+  background-color: white;
   border-radius: 10px;
   border: solid 1px rgba(43, 42, 42, 0.3215686275);
+  box-shadow: rgba(0, 0, 0, 0.2666666667) 0 2px 4px 0px;
 }
 
 div.division {
@@ -223,4 +226,13 @@ div table td {
   padding: 1em;
   color: inherit;
   text-decoration: none;
+}
+
+footer > a {
+  color: white;
+  transition-duration: 0.3s;
+}
+
+footer > a:hover {
+  color: rgb(228, 242, 255);
 }/*# sourceMappingURL=index.css.map */

@@ -10,6 +10,6 @@
             $pathAux = '../../';
         echo "href=\"$pathAux".'about.php"';
         ?>>
-        <p>&copy; 2022 - Marcelo e Matheus</p>
+        <h4>&copy; 2022 - Marcelo e Matheus</h4>
     </a>
 </footer>

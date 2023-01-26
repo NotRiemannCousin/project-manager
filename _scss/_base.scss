@@ -1,11 +1,17 @@
 $color-separation-1: #2b2a2a52;
 $color-separation-2: #2a2c2f;
 
-$color-light-1: #d5e2ec;
-$color-light-2: #f1f8fd;
+$primary: #243261;
+$primary-shadow: #1c2850;
+
+$background-1: rgb(251, 253, 255);
+$background-2: rgb(228, 242, 255);
+
+
 
 body,
 html {
+    background-image: linear-gradient($background-1, $background-2);
     padding: 0;
     margin: 0;
     width: 100%;
@@ -37,8 +43,9 @@ td {
 }
 
 header {
-    background-color: $color-light-1;
+    background-image: linear-gradient($primary, $primary-shadow);
     width: 100%;
+    color: white;
     border-bottom: 1px solid $color-separation-2;
     padding: 0.5em 1.5em;
     display: flex;
@@ -50,7 +57,7 @@ header h1 {
 }
 
 footer {
-    background-color: $color-light-1;
+    background-image: linear-gradient($primary-shadow, $primary);
     width: 100%;
     border-top: 1px solid $color-separation-2;
     padding: 0.7em;
@@ -76,7 +83,7 @@ footer > p {
 @mixin coloums($media, $amount) {
     @for $i from 1 to $amount + 1 {
         .col-#{$media}-#{$i} {
-            width: $i * 100% / $amount;
+            width: calc($i * 100% / $amount);
         }
     }
 }

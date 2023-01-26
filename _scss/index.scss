@@ -26,9 +26,11 @@ main .devs,
 .alocs {
     margin: 1em 0;
     padding: 1em;
-    background-color: $color-light-2;
+    // background-image: linear-gradient($color-light-2, $color-light-1 );
+    background-color: white;
     border-radius: 10px;
     border: solid 1px $color-separation-1;
+    box-shadow: #00000044 0 2px 4px 0px;
 }
 
 div.division {
@@ -70,4 +72,13 @@ div table td {
     padding: 1em;
     color: inherit;
     text-decoration: none;
+}
+
+footer>a{
+    color: white;
+    transition-duration: .3s;
+}
+
+footer>a:hover{
+    color: $background-2;
 }

@@ -1,5 +1,6 @@
 body,
 html {
+  background-image: linear-gradient(rgb(251, 253, 255), rgb(228, 242, 255));
   padding: 0;
   margin: 0;
   width: 100%;
@@ -31,8 +32,9 @@ td {
 }
 
 header {
-  background-color: #d5e2ec;
+  background-image: linear-gradient(#243261, #1c2850);
   width: 100%;
+  color: white;
   border-bottom: 1px solid #2a2c2f;
   padding: 0.5em 1.5em;
   display: flex;
@@ -44,7 +46,7 @@ header h1 {
 }
 
 footer {
-  background-color: #d5e2ec;
+  background-image: linear-gradient(#1c2850, #243261);
   width: 100%;
   border-top: 1px solid #2a2c2f;
   padding: 0.7em;
