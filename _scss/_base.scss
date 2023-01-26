@@ -52,6 +52,7 @@ header {
     padding: 0.5em 1.5em;
     display: flex;
     align-items: center;
+    box-shadow: #00000079 0 4px 6px 0px;
 }
 
 header h1 {
@@ -64,6 +65,7 @@ footer {
     border-top: 1px solid $color-separation-2;
     padding: 0.7em;
     text-align: center;
+    box-shadow: #00000079 0 -4px 6px 0px;
 }
 
 footer > p {
