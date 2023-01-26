@@ -32,13 +32,12 @@ $nasc = $_POST['nasc'];
 $nivel = $_POST['nivel'];
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 $senha = preg_replace("/[^\p{L}]/u", "", $_POST['senha']);
-$ativo = ($_POST['ativo'] == 'on' ? 1 : 0);
-$admin = ($_POST['admin'] == 'on' ? 1 : 0);
+$ativo = (isset($_POST['ativo']) && $_POST['ativo'] == 'on' ? 1 : 0);
+$admin = (isset($_POST['admin']) && $_POST['admin'] == 'on' ? 1 : 0);
 
 
 
 $dev = R::load('desenvolvedor', $_POST['id']);
-echo $_POST['nome']."-".$dev->nome."-".$nome;
 
 $dev->nome  = $nome;
 $dev->nasc  = $nasc;
@@ -51,6 +50,5 @@ $dev->credencial->admin = $admin;
 R::store($dev);
 
 
-
-// header('Location: ../list/');
+header('Location: ../list/');
 R::close();

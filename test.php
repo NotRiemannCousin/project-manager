@@ -5,19 +5,19 @@
 
 
 
-$s = "asvfvkmfavpã~éáà";
-
-// // $dev = R::load('zzzzzz', 2);
-
-echo '<pre>';
-
-print_r($s);
-// // print_r($dev);
-echo "\n\n";
-// // print_r($dev->credencial);
-
-print_r (preg_replace("/[^\p{L}\s]/u", "", $s));
-echo '</pre>';
+// $s = "asvfvkmfavpã~éáà";
+// 
+// $dev = R::load('zzzzzz', 2);
+// 
+// echo '<pre>';
+// 
+// print_r($s);
+// print_r($dev);
+// echo "\n\n";
+// print_r($dev->credencial);
+// 
+// print_r (preg_replace("/[^\p{L}\s]/u", "", $s));
+// echo '</pre>';
 
 
 // $devs = R::findAll('desenvolvedor');
