@@ -4,8 +4,8 @@ $color-separation-2: #2a2c2f;
 $primary: #243261;
 $primary-shadow: #1c2850;
 
-$background-1: rgb(251, 253, 255);
-$background-2: rgb(228, 242, 255);
+$background-1: rgb(255, 255, 255);
+$background-2: rgb(227, 239, 243);
 
 table{
     background-color: white;
@@ -72,7 +72,16 @@ footer > p {
     margin: 1em 0;
 }
 
+footer>a{
+    color: white;
+}
+
+footer>a:hover{
+    color: $background-2;
+}
+
 .back-link {
+    background-color: white;
     border: solid 1px $color-separation-1;
     display: inline-block;
     padding: 0.3em 0.6em;
