@@ -1,3 +1,7 @@
+table {
+  background-color: white;
+}
+
 body,
 html {
   background-image: linear-gradient(rgb(251, 253, 255), rgb(228, 242, 255));
@@ -198,22 +202,18 @@ div table {
   border-collapse: collapse;
   width: 100%;
 }
-
-div table thead tr td * {
+div table div table thead tr td * {
   margin: 0.3em 0.2em;
   text-align: center;
 }
-
-div table thead {
+div table div table thead {
   width: 100%;
 }
-
-div table td {
-  /* white-space: nowrap; */
-  /* text-overflow: ellipsis; */
+div table div table td {
   overflow: hidden;
   max-height: 2rem;
   padding: 0.3em;
+  border-color: #323232;
 }
 
 .link {
@@ -230,7 +230,6 @@ div table td {
 
 footer > a {
   color: white;
-  transition-duration: 0.3s;
 }
 
 footer > a:hover {

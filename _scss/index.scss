@@ -45,7 +45,6 @@ div.division {
 div table {
     border-collapse: collapse;
     width: 100%;
-}
 
 div table thead tr td * {
     margin: 0.3em 0.2em;
@@ -57,11 +56,11 @@ div table thead {
 }
 
 div table td {
-    /* white-space: nowrap; */
-    /* text-overflow: ellipsis; */
     overflow: hidden;
     max-height: 2rem;
     padding: 0.3em;
+    border-color: #323232;
+}
 }
 
 .link {
@@ -75,8 +74,7 @@ div table td {
 }
 
 footer>a{
-    color: white;
-    transition-duration: .3s;
+    color: white; 
 }
 
 footer>a:hover{

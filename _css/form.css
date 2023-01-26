@@ -1,3 +1,7 @@
+table {
+  background-color: white;
+}
+
 body,
 html {
   background-image: linear-gradient(rgb(251, 253, 255), rgb(228, 242, 255));
