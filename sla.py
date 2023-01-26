@@ -82,5 +82,3 @@ for i in range(10):
     sla = 190 + i * 12.2
     print("<ellipse style=\"fill: none; stroke: rgb(0, 0, 0);\" cx=\"192.2\" cy=\"", sla,"\" rx=\"8.842\" ry=\"2.456\"></ellipse>")
 print("</svg>")
-
-
