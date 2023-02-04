@@ -20,6 +20,16 @@ $dev = R::load('desenvolvedor', $_GET['dev-id']);
     <title>Entrar</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../_css/form.css">
+    <script>
+        function ini() {
+            document.getElementById('term').setAttribute('min', document.getElementById('inicio').value);
+        }
+
+        function ter() {
+            console.log(document.getElementById('term').value);
+            document.getElementById('inicio').setAttribute('max', document.getElementById('term').value);
+        }
+    </script>
 </head>
 <?php include_once '../../header.php' ?>
 <main>
@@ -37,11 +47,11 @@ $dev = R::load('desenvolvedor', $_GET['dev-id']);
             </div>
             <div class="form-group">
                 <label for="inicio">Início</label>
-                <input type="date" name="inicio" id="inicio" class="form-control">
+                <input type="date" name="inicio" id="inicio" class="form-control" onchange="ini()">
             </div>
             <div class="form-group">
                 <label for="term">Término</label>
-                <input type="date" name="term" id="term" class="form-control">
+                <input type="date" name="term" id="term" class="form-control" onchange="ter()">
             </div>
             <div class="form-group">
                 <label for="remun">Remuneração</label>

@@ -4,8 +4,7 @@ require_once '../../functions.php';
 
 
 if (
-    (
-        !isset($_POST['dev-id'])  ||
+    (!isset($_POST['dev-id'])  ||
         !isset($_POST['proj-id']) ||
         !isset($_POST['inicio'])  ||
         !isset($_POST['term'])    ||
@@ -27,8 +26,7 @@ R::setup('mysql:host=127.0.0.1;dbname=GerenciadorProjetos', 'root');
 $proj = R::load('projeto', $_POST['proj-id']);
 $dev = R::load('desenvolvedor', $_POST['dev-id']);
 
-if (!$proj || !$dev)
-{
+if (!$proj || !$dev) {
     header('location: dev-s.php?err=4');
     die;
 }
