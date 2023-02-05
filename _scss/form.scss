@@ -15,3 +15,10 @@ main {
     flex-direction: column;
     gap: .5em;
 }
+
+
+.form-control[type=checkbox]{
+    height: inherit;
+    width: inherit;
+    display: inline;
+}

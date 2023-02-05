@@ -37,34 +37,34 @@ $dev = R::load('desenvolvedor', $_GET['dev-id']);
         <form action="validate.php" method="post">
             <div class="form-group">
                 <label>Desenvolvedor</label>
-                <input type="text" class="form-control" class="form-control" <?= 'value="' . $dev->nome . '"' ?> readonly>
-                <input type="text" name="dev-id" <?= 'value="' . $dev->id . '"' ?> style="display: none">
+                <input class="form-control" type="text" <?= 'value="' . $dev->nome . '"' ?> readonly>
+                <input class="form-control" type="text" name="dev-id" <?= 'value="' . $dev->id . '"' ?> style="display: none">
             </div>
             <div class="form-group">
                 <label>Projeto</label>
-                <input type="text" class="form-control" class="form-control" <?= 'value="' . $proj->nome . '"' ?> readonly>
-                <input type="text" name="proj-id" <?= 'value="' . $proj->id . '"' ?> style="display: none">
+                <input class="form-control" type="text" <?= 'value="' . $proj->nome . '"' ?> readonly>
+                <input class="form-control" type="text" name="proj-id" <?= 'value="' . $proj->id . '"' ?> style="display: none">
             </div>
             <div class="form-group">
                 <label for="inicio">Início</label>
-                <input type="date" name="inicio" id="inicio" class="form-control" onchange="ini()">
+                <input class="form-control" type="date" name="inicio" id="inicio" onchange="ini()">
             </div>
             <div class="form-group">
                 <label for="term">Término</label>
-                <input type="date" name="term" id="term" class="form-control" onchange="ter()">
+                <input class="form-control" type="date" name="term" id="term" onchange="ter()">
             </div>
             <div class="form-group">
                 <label for="remun">Remuneração</label>
                 <div class="form-inline">
-                    <input type="number" name="remun" id="remun" class="form-control" style="flex-grow: 1">
-                    <span class="input-group-text">.00 R$</span>
+                    <input class="form-control" type="number" name="remun" id="remun" style="flex-grow: 1">
+                    <span class="input class="form-control"-group-text">.00 R$</span>
                 </div>
             </div>
             <div class="form-group">
                 <label for="horas">Horas Semanais</label>
                 <div class="form-inline">
-                    <input type="number" name="horas" id="horas" class="form-control" style="flex-grow: 1">
-                    <span class="input-group-text">h</span>
+                    <input class="form-control" type="number" name="horas" id="horas" style="flex-grow: 1">
+                    <span class="input class="form-control"-group-text">h</span>
                 </div>
 
             </div>

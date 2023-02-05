@@ -8,4 +8,4 @@ if (isset($_GET['id']) && intval($_GET['id'])) {
     R::trash('desenvolvedor', $_GET['id']);
     R::trash('credencial', $_GET['id']);
 }
-header('Location: ../list/');
+header('Location: ../list/' . (!isset($_GET['id']) || !intval($_GET['id']) ? '?err=2' : ''));

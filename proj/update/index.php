@@ -32,24 +32,24 @@ if (!$proj->id)
 
                 <div class="form-group">
                     <label>Nome:</label>
-                    <input type="text" name="nome" class="form-control" <?= 'value="' . $proj->nome . '"' ?>>
+                    <input class="form-control" type="text" name="nome" <?= 'value="' . $proj->nome . '"' ?>>
                 </div>
                 <div class="form-group">
                     <label>Início:</label>
-                    <input type="date" name="inicio" class="form-control" <?= 'value="' . $proj->inicio . '"' ?>>
+                    <input class="form-control" type="date" name="inicio" <?= 'value="' . $proj->inicio . '"' ?>>
                 </div>
                 <div class="form-group">
                     <label>Término Previsto:</label>
-                    <input type="date" name="terminoEsp" class="form-control" <?= 'value="' . $proj->terminoEsp . '"' ?>>
+                    <input class="form-control" type="date" name="terminoEsp" <?= 'value="' . $proj->terminoEsp . '"' ?>>
                 </div>
                 <div class="form-group">
                     <label>Término:</label>
-                    <input type="date" name="termino" class="form-control" <?= 'value="' . $proj->termino . '"' ?>>
+                    <input class="form-control" type="date" name="termino" <?= 'value="' . $proj->termino . '"' ?>>
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Salvar">
                 </div>
-                <input type="text" style="display: none;" name="id" <?= 'value="' . $proj->id . '"' ?>>
+                <input class="form-control" type="text" style="display: none;" name="id" <?= 'value="' . $proj->id . '"' ?>>
             </form>
             <div class="back-link"><a href="../../">Voltar</a></div>
         </div>

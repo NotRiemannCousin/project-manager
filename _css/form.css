@@ -1,3 +1,7 @@
+textarea {
+  height: 13em;
+}
+
 table {
   background-color: white;
 }
@@ -182,4 +186,10 @@ main {
   justify-content: center;
   flex-direction: column;
   gap: 0.5em;
+}
+
+.form-control[type=checkbox] {
+  height: inherit;
+  width: inherit;
+  display: inline;
 }/*# sourceMappingURL=form.css.map */

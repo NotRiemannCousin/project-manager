@@ -24,32 +24,32 @@ $aloc = R::load('alocacao', $_GET['id']);
 <main>
     <form action="validate.php" method="post">
         <div class="cabecalho">
-            <input type="text" name="id" <?= 'value="' . $_GET['id'] . '"' ?> style="display: none">
+            <input class="form-control" type="text" name="id" <?= 'value="' . $_GET['id'] . '"' ?> style="display: none">
             <div class="form-group">
                 <label class="label-control">Desenvolvedor</label>
-                <input type="text" class="form-control" class="form-control" <?= 'value="' . $aloc->desenvolvedor->nome . '"' ?> readonly>
-                <input type="text" name="dev-id" <?= 'value="' . $aloc->desenvolvedor->id . '"' ?> style="display: none">
+                <input class="form-control" type="text" <?= 'value="' . $aloc->desenvolvedor->nome . '"' ?> readonly>
+                <input class="form-control" type="text" name="dev-id" <?= 'value="' . $aloc->desenvolvedor->id . '"' ?> style="display: none">
             </div>
             <div class="form-group">
                 <label class="label-control">Projeto</label>
-                <input type="text" class="form-control" class="form-control" <?= 'value="' . $aloc->projeto->nome     . '"' ?> readonly>
-                <input type="text" name="proj-id" <?= 'value="' . $aloc->projeto->id . '"' ?> style="display: none">
+                <input class="form-control" type="text" <?= 'value="' . $aloc->projeto->nome     . '"' ?> readonly>
+                <input class="form-control" type="text" name="proj-id" <?= 'value="' . $aloc->projeto->id . '"' ?> style="display: none">
             </div>
             <div class="form-group">
                 <label class="label-control" for="inicio">Início</label>
-                <input type="date" name="inicio" id="inicio" class="form-control" <?= 'value="' . $aloc->inicio . '"' ?>>
+                <input class="form-control" type="date" name="inicio" id="inicio" <?= 'value="' . $aloc->inicio . '"' ?>>
             </div>
             <div class="form-group">
                 <label class="label-control" for="term">Término</label>
-                <input type="date" name="term" id="term" class="form-control" <?= 'value="' . $aloc->termino . '"' ?>>
+                <input class="form-control" type="date" name="term" id="term" <?= 'value="' . $aloc->termino . '"' ?>>
             </div>
             <div class="form-group">
                 <label class="label-control" for="remun">Remuneração</label>
-                <input type="number" name="remun" id="remun" class="form-control" <?= 'value="' . $aloc->remuneracao . '"' ?>>
+                <input class="form-control" type="number" name="remun" id="remun" <?= 'value="' . $aloc->remuneracao . '"' ?>>
             </div>
             <div class="form-group">
                 <label class="label-control" for="horas">Horas Semanais</label>
-                <input type="number" name="horas" id="horas" class="form-control" <?= 'value="' . $aloc->horas . '"' ?>>
+                <input class="form-control" type="number" name="horas" id="horas" <?= 'value="' . $aloc->horas . '"' ?>>
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary">

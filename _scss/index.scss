@@ -22,8 +22,9 @@ main {
 }
 
 main .devs,
-.projs,
-.alocs {
+main .projs,
+main .alocs,
+main .tasks {
     margin: 1em 0;
     padding: 1em;
     // background-image: linear-gradient($color-light-2, $color-light-1 );

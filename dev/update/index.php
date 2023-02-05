@@ -32,19 +32,19 @@ if (!$dev->id)
 
                 <div class="form-group">
                     <label>Nome:</label>
-                    <input type="text" name="nome" class="form-control" <?= 'value="' . $dev->nome . '"' ?>>
+                    <input class="form-control" type="text" name="nome" <?= 'value="' . $dev->nome . '"' ?>>
                 </div>
                 <div class="form-group">
                     <label>Senha:</label>
-                    <input type="password" name="senha" class="form-control"  <?= 'value="' . $dev->credencial->senha . '"' ?>>
+                    <input class="form-control" type="password" name="senha"  <?= 'value="' . $dev->credencial->senha . '"' ?>>
                 </div>
                 <div class="form-group">
                     <label>Email:</label>
-                    <input type="email" name="email" class="form-control" <?= 'value="' . $dev->credencial->email . '"' ?>>
+                    <input class="form-control" type="email" name="email" <?= 'value="' . $dev->credencial->email . '"' ?>>
                 </div>
                 <div class="form-group">
                     <label>Data de Nascimento:</label>
-                    <input type="date" name="nasc" class="form-control" <?= 'value="' . $dev->nasc . '"' ?>  <?= 'max="'.(new DateTime('-14 years'))->format('Y-m-d').'"'?>>
+                    <input class="form-control" type="date" name="nasc" <?= 'value="' . $dev->nasc . '"' ?>  <?= 'max="'.(new DateTime('-14 years'))->format('Y-m-d').'"'?>>
                 </div>
                 <div class="form-group">
                     <label>Nivel:</label>
@@ -69,17 +69,17 @@ if (!$dev->id)
 
                 <div class="form-group">
                     <label for="admin" class="form-check-label">Administrador: </label>
-                    <input type="checkbox" name="admin" id="admin" <?= ($dev->credencial->admin ? 'checked' : '') ?>>
+                    <input class="form-control" type="checkbox" name="admin" id="admin" <?= ($dev->credencial->admin ? 'checked' : '') ?>>
                 </div>
                 <div class="form-group">
                     <label for="ativo" class="form-check-label">Ativo: </label>
-                    <input type="checkbox" name="ativo" id="ativo" <?= ($dev->credencial->ativo ? 'checked' : '') ?>>
+                    <input class="form-control" type="checkbox" name="ativo" id="ativo" <?= ($dev->credencial->ativo ? 'checked' : '') ?>>
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Salvar">
                 </div>
         </div>
-        <input type="text" style="display: none;" name="id"  <?= 'value="' . $dev->id . '"' ?>>
+        <input class="form-control" type="text" style="display: none;" name="id"  <?= 'value="' . $dev->id . '"' ?>>
         </form>
         <div class="back-link"><a href="../../">Voltar</a></div>
         </div>

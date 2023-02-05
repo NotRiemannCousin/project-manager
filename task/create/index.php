@@ -13,10 +13,15 @@
 <body>
     <main>
         <div class="cabecalho">
-            <h2>Procurar Desenvolvedor</h2>
-            <form action="dev-c.php" method="get">
+            <h2>Procurar Desenvolvedor e Projeto</h2>
+            <form action="info.php" method="get">
                 <div class="form-group">
-                    <input type="search" name="dev-search" class="form-control" <?= (isset($_GET['dev-search']) ? 'value=' . $_GET['dev-search'] : '') ?>>
+                    <label for="dev-search">Desenvolvedor: </label>
+                    <input class="form-control" type="search" name="dev-search" <?= (isset($_GET['dev-search']) ? 'value=' . $_GET['dev-search'] : '') ?>>
+                </div>
+                <div class="form-group">
+                    <label for="proj-search">Projeto: </label>
+                    <input class="form-control" type="search" name="proj-search" <?= (isset($_GET['proj-search']) ? 'value=' . $_GET['proj-search'] : '') ?>>
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary">

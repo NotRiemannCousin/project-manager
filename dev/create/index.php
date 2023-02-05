@@ -20,23 +20,23 @@
 
                 <div class="form-group">
                     <label>Nome:</label>
-                    <input type="text" name="nome" class="form-control" <?= (isset($_GET['nome']) ? 'value=' . $_GET['nome'] : '') ?>>
+                    <input class="form-control" type="text" name="nome" <?= (isset($_GET['nome']) ? 'value=' . $_GET['nome'] : '') ?>>
                 </div>
                 <div class="form-group">
                     <label>Senha:</label>
-                    <input type="password" name="senha" class="form-control">
+                    <input class="form-control" type="password" name="senha">
                 </div>
                 <div class="form-group">
                     <label>Email:</label>
-                    <input type="email" name="email" class="form-control" <?= (isset($_GET['email']) ? 'value=' . $_GET['email'] : '') ?>>
+                    <input class="form-control" type="email" name="email" <?= (isset($_GET['email']) ? 'value=' . $_GET['email'] : '') ?>>
                 </div>
                 <div class="form-group">
                     <label>Data de Nascimento:</label>
-                    <input type="date" name="nasc" class="form-control" <?= (isset($_GET['nasc']) ? 'value=' . $_GET['nasc'] : '') ?> <?= 'max="'.(new DateTime('-14 years'))->format('Y-m-d').'"'?>>
+                    <input class="form-control" type="date" name="nasc" <?= (isset($_GET['nasc']) ? 'value=' . $_GET['nasc'] : '') ?> <?= 'max="'.(new DateTime('-14 years'))->format('Y-m-d').'"'?>>
                 </div>
                 <div class="form-group">
                     <label>Nivel:</label>
-                    <select class="form-select form-select-sm" name="nivel">
+                    <select class="form-control" name="nivel">
                         <option value="A" selected>A (Básico)</option>
                         <option value="B">B (Médio)</option>
                         <option value="C">C (Avançado)</option>
@@ -45,11 +45,11 @@
 
                 <div class="form-group">
                     <label for="admin" class="form-check-label">Administrador: </label>
-                    <input type="checkbox" name="admin" id="admin" <?= (isset($_GET['admin']) ? 'checked' : '') ?>>
+                    <input class="form-control" type="checkbox" name="admin" id="admin" <?= (isset($_GET['admin']) ? 'checked' : '') ?>>
                 </div>
                 <div class="form-group">
                     <label for="ativo" class="form-check-label">Ativo: </label>
-                    <input type="checkbox" name="ativo" id="ativo" <?= (isset($_GET['ativo']) ? 'checked' : '') ?>>
+                    <input class="form-control" type="checkbox" name="ativo" id="ativo" <?= (isset($_GET['ativo']) ? 'checked' : '') ?>>
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Salvar">

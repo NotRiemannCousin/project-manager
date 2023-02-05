@@ -18,19 +18,19 @@
 
                 <div class="form-group">
                     <label>Nome:</label>
-                    <input type="text" name="nome" class="form-control" <?= (isset($_GET['nome']) ? 'value=' . $_GET['nome'] : '') ?>>
+                    <input class="form-control" type="text" name="nome" <?= (isset($_GET['nome']) ? 'value=' . $_GET['nome'] : '') ?>>
                 </div>
                 <div class="form-group">
                     <label>Início:</label>
-                    <input type="date" name="inicio" class="form-control" <?= (isset($_GET['inicio']) ? 'value=' . $_GET['inicio'] : '') ?>>
+                    <input class="form-control" type="date" name="inicio" <?= (isset($_GET['inicio']) ? 'value=' . $_GET['inicio'] : '') ?>>
                 </div>
                 <div class="form-group">
                     <label>Término Previsto:</label>
-                    <input type="date" name="terminoEsp" class="form-control" <?= (isset($_GET['terminoEsp']) ? 'value=' . $_GET['terminoEsp'] : '') ?>>
+                    <input class="form-control" type="date" name="terminoEsp" <?= (isset($_GET['terminoEsp']) ? 'value=' . $_GET['terminoEsp'] : '') ?>>
                 </div>
                 <div class="form-group">
                     <label>Término:</label>
-                    <input type="date" name="termino" class="form-control" <?= (isset($_GET['termino']) ? 'value=' . $_GET['termino'] : '') ?>>
+                    <input class="form-control" type="date" name="termino" <?= (isset($_GET['termino']) ? 'value=' . $_GET['termino'] : '') ?>>
                 </div>
         </div>
 

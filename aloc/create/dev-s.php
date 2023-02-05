@@ -16,7 +16,7 @@
             <h2>Procurar Desenvolvedor</h2>
             <form action="dev-c.php" method="get">
                 <div class="form-group">
-                    <input type="search" name="dev-search" class="form-control" <?= (isset($_GET['dev-search']) ? 'value=' . $_GET['dev-search'] : '') ?>>
+                    <input class="form-control" type="search" name="dev-search" <?= (isset($_GET['dev-search']) ? 'value=' . $_GET['dev-search'] : '') ?>>
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary">
