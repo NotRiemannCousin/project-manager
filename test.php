@@ -3,6 +3,11 @@
 
 // R::setup('mysql:host=127.0.0.1;dbname=GerenciadorProjetos', 'root');
 
+// $tasks_ids = R::getCol('SELECT id FROM alocacao WHERE desenvolvedor_id = 7');
+
+// echo '<pre>';
+// var_dump($tasks_ids);
+// echo '</pre>';
 
 
 // $s = "asvfvkmfavpã~éáà";

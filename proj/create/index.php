@@ -39,8 +39,8 @@
             <input type="reset" class="btn btn-secondary ml-2" value="Apagar Dados">
         </div>
         </form>
+    </div>
         <div class="back-link"><a href="../../">Voltar</a></div>
-        </div>
     </main>
 </body>
 

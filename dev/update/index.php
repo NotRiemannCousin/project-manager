@@ -81,8 +81,8 @@ if (!$dev->id)
         </div>
         <input class="form-control" type="text" style="display: none;" name="id"  <?= 'value="' . $dev->id . '"' ?>>
         </form>
+    </div>
         <div class="back-link"><a href="../../">Voltar</a></div>
-        </div>
     </main>
     <?php include '../../footer.php' ?>
 </body>

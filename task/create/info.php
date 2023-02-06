@@ -38,7 +38,7 @@ if (count($data) == 0)
                 <select class="form-control" id="aloc" name="aloc-id">
                     <?php
                     foreach ($data as $aloc) {
-                        echo '<option value="' . $aloc['id'] . '" ' . (isset($_GET['dev-search']) && $_GET['dev-search'] == $aloc['id'] ? 'selected' : '') . '>' . $aloc['desenvolvedor'] . ', em "' . $aloc['projeto'] . '"</option>';
+                        echo '<option value="' . $aloc['id'] . '" ' . (isset($_GET['dev-search']) && $_GET['dev-search'] == $aloc['id'] ? 'selected' : '') . '>' . $aloc['desenvolvedor'] . ', em &quot;' . $aloc['projeto'] . '&quot;</option>';
                     }
                     ?>
                 </select>
@@ -52,9 +52,7 @@ if (count($data) == 0)
             </div>
         </form>
     </div>
-    <div class="back-link">
-        <?= '<a href="index.php">voltar</a>' ?>
-    </div>
+    <div class="back-link"><a href="index.php">voltar</a></div>
 </main>
 </body>
 <?php include_once '../../footer.php' ?>

@@ -51,8 +51,8 @@ if (!$proj->id)
                 </div>
                 <input class="form-control" type="text" style="display: none;" name="id" <?= 'value="' . $proj->id . '"' ?>>
             </form>
-            <div class="back-link"><a href="../../">Voltar</a></div>
         </div>
+            <div class="back-link"><a href="../../">Voltar</a></div>
     </main>
     <?php include '../../footer.php' ?>
 </body>
